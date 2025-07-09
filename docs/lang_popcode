@@ -1,0 +1,69 @@
+
+
+ <style>
+    .lang-popup-overlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      justify-content: center;
+      align-items: center;
+      z-index: 999999; /* Higher than usual */
+    }
+    .lang-popup-box {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    }
+    .lang-popup-box h2 {
+      margin-bottom: 20px;
+    }
+    .lang-popup-box button {
+      margin: 0 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .lang-btn-en {
+      background-color: #007bff;
+      color: white;
+    }
+    .lang-btn-hi {
+      background-color: #28a745;
+      color: white;
+    }
+  </style>
+
+<!-- Language Selection Popup -->
+<div class="lang-popup-overlay" id="langPopupCustom123">
+  <div class="lang-popup-box">
+    <h2>Continue in...</h2>
+    <button class="lang-btn-en" onclick="langClosePopup123()">English</button>
+    <button class="lang-btn-hi" onclick="langRedirectToHindi123()">Hindi</button>
+  </div>
+</div>
+
+<script>
+  window.addEventListener("load", function() {
+    setTimeout(function() {
+      var popup = document.getElementById("langPopupCustom123");
+      if (popup) popup.style.display = "flex";
+    }, 5000);
+  });
+
+  function langClosePopup123() {
+    var popup = document.getElementById("langPopupCustom123");
+    if (popup) popup.style.display = "none";
+  }
+
+  function langRedirectToHindi123() {
+    window.location.href = "https://www.hindi.com";
+  }
+</script>
+
+
