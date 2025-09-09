@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nira</title>
+  <style>
+    /* Page reset */
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+
+    /* Fullscreen background */
+    .bg {
+      /* Fallback for browsers without dvh support */
+      min-height: 100vh;
+      /* Modern mobile-safe viewport */
+      min-height: 100dvh;
+
+      /* 🔁 Replace this with your image URL */
+      background-image: url("images/cs.png");
+
+      background-size: cover;       /* Fill screen, keep ratio */
+      background-position: center;  /* Center crop */
+      background-repeat: no-repeat; /* No tiling */
+      background-attachment: fixed; /* Nice effect on desktop; remove if not needed */
+
+      /* Optional dark overlay for readability */
+      position: relative;
+      isolation: isolate;
+    }
+    .bg::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.35); /* lighten/darken as needed */
+      z-index: -1;
+    }
+
+    /* Centered text */
+    .content {
+      height: 100%;
+      min-height: inherit;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      color: #fff;
+      padding: 2rem;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 6vw, 4rem);
+      letter-spacing: 0.04em;
+      margin: 0 0 0.5rem;
+      text-transform: uppercase;
+    }
+    p {
+      font-size: clamp(1rem, 2.5vw, 1.25rem);
+      opacity: 0.9;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <main class="bg">
+    <div class="content">
+      <div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
